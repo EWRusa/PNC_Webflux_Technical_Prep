@@ -43,17 +43,18 @@ public class MongoStudentService implements StudentService {
     }
 
     @Override
-    public Mono<Student> getStudent(int id) {
-        return null;
+    public Mono<Student> getStudent(String id) {
+        return studentRepository.findById(id);
     }
 
     @Override
     public Flux<Student> listStudents() {
-        return null;
+
+        return studentRepository.findAll();
     }
 
     @Override
     public Flux<Student> listStudentsByGrade(int grade) {
-        return null;
+        return studentRepository.findAllByGrade(grade);
     }
 }

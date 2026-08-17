@@ -9,7 +9,7 @@ public interface StudentService {
     public Mono<Student> addStudent(Student student);
     public Mono<Student> updateStudent(Student student);
     public Mono<Void> increaseGradeOfAllStudents();
-    public Mono<Student> getStudent(int id);
+    public Mono<Student> getStudent(String id);
     public Flux<Student> listStudents();
     public Flux<Student> listStudentsByGrade(int grade);
 
