@@ -1,4 +1,4 @@
-package com.emmett.demo_flux.configuration;
+package com.emmett.demo_flux.config;
 
 import com.mongodb.reactivestreams.client.MongoClient;
 import com.mongodb.reactivestreams.client.MongoClients;
@@ -13,6 +13,6 @@ public class MongoConfiguration extends AbstractReactiveMongoConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "reactive";
+        return "local";
     }
 }

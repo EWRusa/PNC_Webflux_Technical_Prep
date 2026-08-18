@@ -11,3 +11,13 @@ services:
     tty: true
     environment:
       - CHOKIDAR_USEPOLLING=true
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: supersecretpassword
+    volumes:
+      - ./database:/data/db

@@ -1,3 +1,6 @@
 spring.:
   application:
     name: demo-flux
+spring:
+  mongodb:
+    uri: mongodb://app:password@localhost:27017/local?authSource=admin
